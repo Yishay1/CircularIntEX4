@@ -1,4 +1,4 @@
-#include "CircularInt.h"
+#include "CircularInt.hpp"
 
 CircularInt::CircularInt(int _min, int _max)
 {
