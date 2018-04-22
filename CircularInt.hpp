@@ -22,9 +22,9 @@ class CircularInt
 		void operator--();
 		void operator++();
 		friend int operator/(const CircularInt&, int);
-		void operator*=(int);	
-		void operator+=(int);
-		void operator-=(int);
+		CircularInt& operator*=(int);	
+		CircularInt& operator+=(int);
+		CircularInt& operator-=(int);
 		void operator=(const CircularInt&);
 		friend ostream& operator<< (ostream& os, const CircularInt& c);
 		friend istream& operator>> (istream& is, CircularInt& c);
