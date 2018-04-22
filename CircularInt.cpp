@@ -53,13 +53,13 @@ int operator+(CircularInt& first, CircularInt& sec)
 	return (first.num + sec.num) % first.range + first.min-1;
 }
 
-void CircularInt::operator*=(int tmp)
+CircularInt& CircularInt::operator*=(int tmp)
 {
 	int temp=(num-min+1)*tmp;
 	temp=temp%range;
 	*this+=temp;
 }
-void CircularInt::operator+=(int tmp)
+CircularInt& CircularInt::operator+=(int tmp)
 {
 	tmp=tmp%range;
 	if(tmp>=0)
@@ -91,7 +91,7 @@ CircularInt& operator *(int tmp,const CircularInt& c)
 	}
 	return 3;
 }
-void CircularInt::operator-=(int tmp)
+CircularInt& CircularInt::operator-=(int tmp)
 {
 	tmp=tmp%range;
 	if(tmp>=0)
