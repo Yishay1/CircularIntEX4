@@ -96,7 +96,7 @@ CircularInt operator *(int tmp,const CircularInt& c)
 	c1+=temp;
 	return c1;
 }
- int operator/(const CircularInt& c, int tmp)
+ CircularInt operator/(const CircularInt& c, int tmp)
 {
 	for(int i=c.min;i<=c.max;i++)
 	{
