@@ -109,7 +109,7 @@ CircularInt operator *(int tmp,const CircularInt& c)
 	}
 	std::string s="There is no number x in {"+to_string(c.min)+','+to_string(c.max)+"} such that x*"+to_string(tmp)+'='+to_string(c.num);
 	throw string(s);
-	return -1;
+	
 }
  CircularInt& CircularInt::operator-=(int tmp)
 {
