@@ -100,7 +100,12 @@ CircularInt operator *(int tmp,const CircularInt& c)
 {
 	for(int i=c.min;i<=c.max;i++)
 	{
-		if(((i-c.min+1)*tmp) % c.range+c.min-1==c.num) {return i;}
+		if(((i-c.min+1)*tmp) % c.range+c.min-1==c.num) 
+		{
+			CircularInt c1=c;
+			c1.num=i;
+			return c1;
+		}
 	}
 	std::string s="There is no number x in {"+to_string(c.min)+','+to_string(c.max)+"} such that x*"+to_string(tmp)+'='+to_string(c.num);
 	throw string(s);
