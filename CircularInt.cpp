@@ -296,7 +296,7 @@ istream& operator>> (istream& is, CircularInt& cir){
 	cir.num = temp;
 	return is;
 }
-CircularInt& CircularInt::operator*=(int tmp)
+/*CircularInt& CircularInt::operator*=(int tmp)
 {
 	num=num*tmp;
 	this->norm();
@@ -337,4 +337,4 @@ CircularInt operator *(const CircularInt& c,int i)
 	//c1.num=c.max;
 	//c1+=tmp;
 	return c1;
-}
+}*/
