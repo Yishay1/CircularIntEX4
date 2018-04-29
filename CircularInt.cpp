@@ -1,6 +1,8 @@
 #include "CircularInt.hpp"
 #include <string>
-
+/*
+*constructor
+*/
 CircularInt::CircularInt(int _min, int _max)
 {
 	min=_min;
@@ -8,6 +10,9 @@ CircularInt::CircularInt(int _min, int _max)
 	range=max-min+1;
 	num=min;
 }
+/*
+*constructor
+*/
 CircularInt::CircularInt()
 {
 	min=0;
@@ -15,13 +20,23 @@ CircularInt::CircularInt()
 	range=0;
 	num=0;
 }
+/*
+*destructor
+*/
 CircularInt::~CircularInt(){}
-
+/*
+*calculate num into range
+*/
 void CircularInt::norm()
 {
 	while(num>max)num=num-range;
 	while(num<min)num=num+range;
 }
+////////////////////////////////////////////
+////////////////////////////////////////////
+/*
+*increament decreament functions
+*/
 
 CircularInt& CircularInt::operator--(int)
 {
@@ -47,7 +62,12 @@ CircularInt& CircularInt::operator++()
 	else num++;
 	return *this;
 }
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 
+/*
+*diffrence functions
+*/
 CircularInt operator -(const CircularInt& c1,const CircularInt& c2)
 {
 	CircularInt c{c1.min,c1.max};
@@ -88,7 +108,13 @@ CircularInt& CircularInt::operator-=(const CircularInt& c)
 	this->norm();
 	return *this;
 }
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
 
+
+/*
+*sum functions
+*/
 CircularInt operator+(CircularInt& c1, CircularInt& c2)
 {
 	CircularInt c{c1.min,c1.max};
@@ -122,7 +148,12 @@ CircularInt& CircularInt::operator+=(const CircularInt& c)
 	this->norm();
 	return *this;
 }
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
+/*
+*multiply functions
+*/
 CircularInt operator *(int i,const CircularInt& c)
 {
 	CircularInt c1{c.min,c.max};
@@ -156,7 +187,12 @@ CircularInt& CircularInt::operator*=(const CircularInt& c)
 	this->norm();
 	return *this;
 }
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
 
+/*
+*divide functions
+*/
 CircularInt operator/(const CircularInt& c, int i)
 {
 	CircularInt c1=c;
@@ -180,7 +216,12 @@ CircularInt& CircularInt::operator/=(int i)
 	this->norm();
         return *this;
 }
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
 
+/*
+*placement functions
+*/
 void CircularInt::operator=(int i)
 {
 	this->num=i;
@@ -191,7 +232,12 @@ void CircularInt::operator=(const CircularInt& c)
 	this->num=c.num;
 	this->norm();
 }
+///////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
 
+/*
+*comparison functions
+*/
 bool CircularInt::operator ==(const CircularInt& c)
 {
 	return(num==c.num);
@@ -264,7 +310,13 @@ bool operator<=(int i, CircularInt& c)
 {
 	return (i<=c.num);
 }
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
 
+
+/*
+*ostream istream functions
+*/
 CircularInt& CircularInt::operator>> (const CircularInt& c)
 {
 	CircularInt *temp=new CircularInt (min,max);
