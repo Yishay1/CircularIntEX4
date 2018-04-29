@@ -76,7 +76,7 @@ CircularInt& CircularInt::operator*=(int tmp)
 {
 	int temp=num*tmp;
 	temp=temp%range;
-	this->num=this->max
+	this->num=this->max;
 	*this+=temp;
 	return *this;
 }
