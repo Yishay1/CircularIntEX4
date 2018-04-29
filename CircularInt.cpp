@@ -321,20 +321,20 @@ CircularInt& CircularInt::operator*=(const CircularInt& c)
 CircularInt operator *(int tmp,const CircularInt& c)
 {
 	CircularInt c1=c;
-	c1.num=c.num*tmp;
+	/*c1.num=c.num*tmp;
 	c1.norm();
 	//temp=temp%c1.range;
 	//c1.num=c1.max;//treat temp%range=0
-	//c1+=temp;
+	//c1+=temp;*/
 	return c1;
 }
 CircularInt operator *(const CircularInt& c,int i)
 {
 	CircularInt c1=c;
-	/*c1.num=c.num*i;
+	c1.num=c.num*i;
 	c1.norm();
 	//tmp=tmp%c.range;
 	//c1.num=c.max;
-	//c1+=tmp;*/
+	//c1+=tmp;
 	return c1;
 }
