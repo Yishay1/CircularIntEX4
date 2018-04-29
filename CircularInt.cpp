@@ -298,11 +298,11 @@ istream& operator>> (istream& is, CircularInt& cir){
 }
 CircularInt& CircularInt::operator*=(int tmp)
 {
-	/*num=num*tmp;
+	num=num*tmp;
 	this->norm();
 	//temp=temp%range;
 	//this->num=this->max;
-	//*this +=temp;*/
+	//*this +=temp;
 	return *this;
 }
 CircularInt operator*(CircularInt& first, CircularInt& sec)
@@ -318,16 +318,16 @@ CircularInt& CircularInt::operator*=(const CircularInt& c)
 	this->norm();
 	return *this;	
 }
-CircularInt operator *(int tmp,const CircularInt& c)
+/*CircularInt operator *(int tmp,const CircularInt& c)
 {
 	CircularInt c1=c;
-	/*c1.num=c.num*tmp;
+	c1.num=c.num*tmp;
 	c1.norm();
 	//temp=temp%c1.range;
 	//c1.num=c1.max;//treat temp%range=0
-	//c1+=temp;*/
+	//c1+=temp;
 	return c1;
-}
+}*/
 CircularInt operator *(const CircularInt& c,int i)
 {
 	CircularInt c1=c;
