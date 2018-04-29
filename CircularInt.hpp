@@ -21,7 +21,7 @@ class CircularInt
 		//CircularInt operator -();
 		friend CircularInt operator +(const CircularInt&,int);
 		friend CircularInt operator +(int,const CircularInt&);
-		friend CircularInt operator *(int,const CircularInt&);
+		//friend CircularInt operator *(int,const CircularInt&);
 		friend CircularInt operator *(const CircularInt&,int);
 		friend CircularInt operator*(CircularInt& first, CircularInt& sec);
 		CircularInt& operator--(int);
