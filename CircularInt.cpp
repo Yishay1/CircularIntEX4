@@ -314,8 +314,8 @@ CircularInt operator*(CircularInt& first, CircularInt& sec)
 }
 CircularInt& CircularInt::operator*=(const CircularInt& c)
 {
-	this->num*=c.num;
-	this->norm();
+	/*this->num*=c.num;
+	this->norm();*/
 	return *this;	
 }
 CircularInt operator *(int tmp,const CircularInt& c)
