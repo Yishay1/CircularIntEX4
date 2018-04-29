@@ -308,14 +308,14 @@ CircularInt& CircularInt::operator*=(int tmp)
 CircularInt operator*(CircularInt& first, CircularInt& sec)
 {
 	CircularInt c=first;
-	c.num=first.num*sec.num;
-	c.norm();
+	/*c.num=first.num*sec.num;
+	c.norm();*/
 	return c;
 }
 CircularInt& CircularInt::operator*=(const CircularInt& c)
 {
-	/*this->num*=c.num;
-	this->norm();*/
+	this->num*=c.num;
+	this->norm();
 	return *this;	
 }
 CircularInt operator *(int tmp,const CircularInt& c)
