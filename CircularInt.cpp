@@ -318,7 +318,7 @@ CircularInt& CircularInt::operator*=(const CircularInt& c)
 	this->norm();
 	return *this;	
 }
-/*CircularInt operator *(int tmp,const CircularInt& c)
+CircularInt operator *(int tmp,const CircularInt& c)
 {
 	CircularInt c1=c;
 	c1.num=c.num*tmp;
@@ -327,7 +327,7 @@ CircularInt& CircularInt::operator*=(const CircularInt& c)
 	//c1.num=c1.max;//treat temp%range=0
 	//c1+=temp;
 	return c1;
-}*/
+}
 CircularInt operator *(const CircularInt& c,int i)
 {
 	CircularInt c1=c;
