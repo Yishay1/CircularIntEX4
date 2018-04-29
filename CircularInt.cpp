@@ -312,7 +312,7 @@ CircularInt operator *(const CircularInt& c,int i)
  CircularInt& CircularInt::operator>> (const CircularInt& c)
 {
         CircularInt *temp=new CircularInt (c.min,c.max);
-        temp->num>>(c.num);
+        temp->num=(c.num);
         return *temp;
 }
 istream& operator>> (istream& is, CircularInt& c)
